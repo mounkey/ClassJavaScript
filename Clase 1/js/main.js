@@ -46,10 +46,4 @@ const textoC = " ";
   let frase2 = textoA + 1;
   let frase3 = textoA + textoC + textoB;
 
-  
-  
-
-
-
-
-
+  //
