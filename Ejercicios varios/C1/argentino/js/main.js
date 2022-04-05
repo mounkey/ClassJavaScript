@@ -5,9 +5,9 @@ let entrada = prompt("ingrese su dirección y numero de puerta");
 let salida = entrada + " " + " ingrsado correctamente ";
 alert( salida);
 let entrada1 = prompt("en que año naciste");
-let salida1 = entrada1 + " " + "ingrsado correctamente";
+let salida1 = entrada1 + "" + "ingrsado correctamente";
 alert(salida1);
-let textoA = "precio_ ";
+let textoA = "precio_";
 let textoB= "total";
 //Concatenar textoA y textoB (“precio_” + “total” \= “precio_total “)
 let resultadoA = textoA + textoB;
