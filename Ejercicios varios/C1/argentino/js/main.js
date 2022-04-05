@@ -1,0 +1,20 @@
+alert("HolaCliente!");
+let nombre = "Pablo Perez";
+console.log(nombre);
+let entrada = prompt("ingrese su dirección y numero de puerta");
+let salida = entrada + " " + " ingrsado correctamente ";
+alert( salida);
+let entrada1 = prompt("en que año naciste");
+let salida1 = entrada1 + " " + "ingrsado correctamente";
+alert(salida1);
+let textoA = "precio_ ";
+let textoB= "total";
+//Concatenar textoA y textoB (“precio_” + “total” \= “precio_total “)
+let resultadoA = textoA + textoB;
+let numero, numero2, numero3;
+numero = 100;
+numero2 = 500;
+numero3 = 1000;
+alert (numero);
+alert (numero2);
+alert (numero3);
