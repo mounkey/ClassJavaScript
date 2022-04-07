@@ -1,11 +1,13 @@
-alert("Hola!!");
-let nombre = prompt(" Pon tu nombre. por favor ");
-let edad =  prompt(" Coloque su edad ");
-let pass = prompt(" Coloque su password ");
-document.write(pass);
-if (pass == "Abril2022"){
-  alert("Bienvenido " +  nombre);
+const pass = "Abril2020";
+alert("Hola Buenos Dias:");
+let name = prompt("Ingrese su nombre:");
+let passUser = prompt("Ingrese la pass");
+if (passUser === pass){
+  aler("Puede Ingtresar a su cuenta, estimado " +  name + ".");
+  
 }
 else{
- alert("No puede entrar, Gracias ")
+  alert("No puede ingresar " + name + ".\n Gracias");
 }
+
+document.write(" Que tengas un excelente dia ");
