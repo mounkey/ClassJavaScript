@@ -46,9 +46,95 @@
       </div>
     </div>
   </nav>
-
   <main>
-    
+    <div class="container text-end fecha " id="fecha">
+    </div>
+    <div class="row qs">
+      <div class="col-sm-12 col-md-6 col-lg-8">
+        <div class="qs__text container">
+          <span>
+            Hola a todos, este sitio web es una colaboracion entre inversiones Go SpA y Mounkey SpA para la personas que desean convertir las diferentes moneda,
+            como dolar americano, peso chileno, peso mexicano, peso argentino.<br>
+            Ademas de contar con un simulador de prestado con interes simple y compuesto. <br>
+            Esto lo hacemos para que nuestro clientes tengan un herramienta facil de usar y gratuita.<br>
+            
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="monedas">
+          <div class="monedas__titulo text-center">
+            Monedas
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <ul>
+                <li>
+                  Dolar
+                </li>
+                <li>
+                  Euro
+                </li>
+                <li>
+                  Peso Mexicano
+                </li>
+                <li>
+                  Peso Chileno
+                </li>
+                <li>
+                  Yen
+                </li>
+                <li>
+                  Yuan
+                </li>
+                <li>
+                  Libra Esterlina
+                </li>
+              </ul>
+            </div>
+            
+            <div class="col-6">
+              <ul>
+                <li>
+                  Dolar
+                </li>
+                <li>
+                  Euro
+                </li>
+                <li>
+                  Peso Mexicano
+                </li>
+                <li>
+                  Peso Chileno
+                </li>
+                <li>
+                  Yen
+                </li>
+                <li>
+                  Yuan
+                </li>
+                <li>
+                  Libra Esterlina
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+    <div class="banner">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="img-fluid" />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img src="https://images.unsplash.com/photo-1459257831348-f0cdd359235f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="img-fluid" />
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-4">
+          <img src="https://images.unsplash.com/photo-1534951009808-766178b47a4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="img-fluid" />
+        </div>
+      </div>
+    </div>
   </main>
   
   <!-- footer -->
@@ -61,5 +147,9 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
+  <script>
+    const date = new Date().toLocaleDateString();
+    document.getElementById("fecha").innerHTML = date;
+  </script>
 </body>
 </html>

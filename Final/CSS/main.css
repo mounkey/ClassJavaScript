@@ -1,6 +1,12 @@
 * {
   margin: 0;
   padding: 0; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+.car{
+  height: 60%;
+  width: 60%  ;
 }
 
 body{
@@ -9,5 +15,45 @@ body{
 
 .menu{
   background-color: aquamarine;
+}
+
+/* Quienes somos */
+
+.qs{
+  background-color: white;
+}
+
+.qs__text{
+  background-color: cadetblue;
+  text-align: justify;
+  margin: 10px 10px 10px 10px;
+  color:white;
+  padding: 10px 15px 10px 15px;
+}
+
+#fecha{
+  color:white;
+  font-size: 20px;
+}
+
+.monedas{
+  font-size: large;
+}
+
+.monedas ul li{
+  list-style: none;
+  padding-bottom: 10px;;
+}
+
+
+.monedas__titulo{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 25px;
+}
+
+.banner{
+  width: auto;
+  height: auto;
 }
 
