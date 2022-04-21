@@ -8,13 +8,9 @@ class Producto{
     this.iva();
   }
 
- iva = () => {
+ iva(){
     this.iva = Number(Math.round(this.precioneto *0.19));
     this.preciofinal = Number(this.precioneto) + this.iva;
-  } 
-
-  desto = (desct) =>{
-    return(Math.round(this.preciofinal * desct));
   }
 }
 let select// entero o flaot
@@ -22,7 +18,6 @@ let cerrar = false;// bolean
 let nom, prec, un, fec, obs;
 //Main
 const fecha = new Date();
-
 const productos= [];
 
 function veriva(){
@@ -57,13 +52,13 @@ do{
       break;
 
       case 2:
-        document.write("<br>Ver iva ");
+        document.write("<br>Ver iva <br>");
         console.log(veriva());
         document.write(veriva());
       break;
 
       case 3:
-        document.write("Ver todo los productos");
+        document.write("<br>Ver todo los productos<br>");
         console.log(ver());
         document.write(ver());
         break;
