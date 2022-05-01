@@ -52,7 +52,7 @@ function Salir(){
 }
 
 function prestamoInteresSimple(monto, interes, tiempo){
-  let num = monto * interes * tiempo;
+  let num = monto * interes * tiempo; 
   Math.round(num);
   return num;
 }
