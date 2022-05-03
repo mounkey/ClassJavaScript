@@ -23,3 +23,14 @@ botonEnviar.addEventListener("click",()=>{
     chatbox.value += "\n"+inputBox.value;
     inputBox.value = "";
 });
+chatbox.style.transition="500ms"
+let RanBorderColor = (ele, speed, interval, op) => {
+  ele.style.transition = speed;
+  function exe() {
+    let colorRandom = Math.random() * 360;
+    ele.style.border = `5px solid hsl(${colorRandom}, 90%, 50%, ${op})`;
+  }
+  setInterval(exe, interval);
+};
+RanBorderColor(chatbox, 1000,1000,0.2)
+RanBorderColor(inputBox, 1000,1000,0.2)
