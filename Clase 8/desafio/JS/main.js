@@ -1,17 +1,17 @@
-/*
-let boton =document.querySelector("button");
-let body = document.querySelector("body");
-let cambiarFondo = function(){
-  body.style.backgroundColor="#AAFFBB";
-}
-boton.addEventListener("click",cambiarFondo);  */
+  
+// let boton =document.querySelector("button");
+// let body = document.querySelector("body");
+// let cambiarFondo = function(){
+//   body.style.backgroundColor="#AAFFBB";
+// }
+// boton.addEventListener("click",cambiarFondo); 
 
-let body = document.getElementsByTagName("body")[0];
+let body = document.getElementsByTagName("body")[0]; 
 let Lector = document.getElementById("lector");
 let Resp = document.getElementById("respuesta");
 
 function changeColor(){
-  body.style.background='#000000';
+  body.style.background='#AAFFBB';
 }
 
 function addText(){

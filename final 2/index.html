@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Piedra, papel o tijeras</title>
+  <link href="css/main.css"" rel="stylesheet" />
+</head>
+<body>
+  <header aling="center">
+    <h1>Piedra,Papel o tijera</h1>
+  </header>
+  <div class="mercador">
+    <p class="user-label badge">User</p>
+    <p class="comp-label badge">PC</p>
+    <span id="user-score">0</span> :
+    <span id="comp-score">0</span>
+  </div>
+  <p id= "nombre"></p>
+  <p id=" el jugador ingresado es "></p>
+  <div class="result">
+    <p>juego!!</p>
+  <div class="opciones">
+  <div class=" choice" id="r">
+    <img src="imagen/piedra.jpeg"/>
+    <input type ="button" value="piedra" onclick=" jugadoringresados() ">
+    <script>
+      window.onload=function (){
+        document.getElementById("button").onclick= selectplayer  ;
+    }
+  </script>
+    <div class=" choice" id="p">
+      <img src="imagen/papel.jpeg"/>
+      <input type ="button" value="papel" onclick=" jugadoringresados() ">  
+      
+      <div class=" choice" id="t">
+        <img src="imagen/tijera.jpeg"/>
+        <input type ="button" value="tijera" onclick=" jugadoringresados() ">
+        <p>Juego!!</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -57,3 +57,31 @@ body{
   height: auto;
 }
 
+#intSimple{
+  padding-left: 15px;
+}
+
+.main{
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  color: white;
+
+}
+form{
+  margin: 0 auto;
+  
+}
+.form__input{
+  padding-left: 5px;
+  width: 100%;
+  color: black;
+}
+
+.respint{
+  padding-left: 25px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
