@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+.car{
+  height: 60%;
+  width: 60%  ;
+}
+
+body{
+  background-color: cadetblue ;
+}
+
+.menu{
+  background-color: aquamarine;
+}
+
+/* Quienes somos */
+
+.qs{
+  background-color: white;
+}
+
+.qs__text{
+  background-color: cadetblue;
+  text-align: justify;
+  margin: 10px 100px 10px 10px;
+  color:white;
+  padding: 10px 15px 10px 15px;
+}
+
+#fecha{
+  color:white;
+  font-size: 20px;
+}
+
+.monedas{
+  font-size: large;
+}
+
+.monedas ul li{
+  list-style: none;
+  padding-bottom: 10px;;
+}
+
+
+.monedas__titulo{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 25px;
+}
+
+.banner{
+  width: auto;
+  height: auto;
+}
+
+#intSimple{
+  padding-left: 15px;
+}
+
+.main{
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  color: white;
+
+}
+form{
+  margin: 0 auto;
+  
+}
+.form__input{
+  padding-left: 5px;
+  width: 100%;
+  color: black;
+}
+
+.respint{
+  padding-left: 25px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
