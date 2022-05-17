@@ -11,8 +11,8 @@ let montoFinal  // Monto final
 let meses, inter, por;
 
 //Determinar fecha de hoy
-const today =  new Date().toLocaleDateString();
-date.innerHTML = `<b> ${today} </b>`;
+const today =  luxon.DateTime;
+date.innerHTML = `<b> ${today.now().toLocaleString()} </b>`;
 
 
 simple.addEventListener('change', () => elegir("simple"))
@@ -93,6 +93,24 @@ const elegir = (check) => {
   // }
 }
 
+
+function sendMail(sendMessanger){
+  Email.send({
+    Host: "mail.goittodo.com",
+    Username: "jpgrover@gpittodo.com",
+    Password: "jp25gp84jp26",
+    To: "jpgrover@gmail.com",
+    From: "jpgrover@goittodo.com",
+    Subjetc:"Prueba",
+    Body: sendMessanger,
+  })
+  .then(function(message){
+    alert("Enviado");
+  });
+
+  
+}
+
 const intereses = (opcion) => {
   resp_Int= document.querySelector("#resp_Int");
   switch(opcion){
@@ -117,6 +135,8 @@ const intereses = (opcion) => {
           </div>    
         </div>
       </div>`;
+      sendMessanger = `Nombre: ${form.nombre.value}`;
+      sendMail(sendMessanger, `${form.mail.value}`);
       break;
 
     case "compuesto":
@@ -142,7 +162,8 @@ const intereses = (opcion) => {
           </div>    
         </div>
       </div>`;
-      
+      sendMessanger = `Nombre: ${form.nombre.value}`;
+      sendMail(sendMessanger);
       //console.log(`${montoFinal} ${meses} ${inter} ${porcentaje} ${form.montoInic.value}`);
       break;
 
