@@ -1,4 +1,5 @@
 const date = document.querySelector("#fecha"); //fecha.
+const claveApi = '25487|5K4hn7MxTCyyRvncL7fC28Q^1M0mHjh5';
 
 //Determinar fecha de hoy
 const today =  luxon.DateTime;
@@ -26,6 +27,7 @@ const valores = {
 valorDia.innerText = valores.dolar
 
 function elegir(convertidor){
+  changeMoney();
   if (convertidor === "DP"){
     convertidorPD.checked = false;
     btn.addEventListener("click", () =>{
@@ -35,19 +37,19 @@ function elegir(convertidor){
         break;
       
         case "Dolar":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value * valores.dolar : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value * valor.rates.USD : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Euro":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value * valores.euro : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value * valor.rates.EUR : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Peso Argentino":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value * valores.peso_arg : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value * valor.rates.ARS : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Peso Mexicano":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value * valores.peso_mex : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value * valor.rates.MXN : "No puedes dejar el valor sin ingresar un numero ";
         break;
       }
     })    
@@ -60,19 +62,19 @@ function elegir(convertidor){
         break;
       
         case "Dolar":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value / valores.dolar : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value / valor.rates.USD : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Euro":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value / valores.euro : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value / valor.rates.EUR : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Peso Argentino":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value / valores.peso_arg : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value / valor.rates.ARS: "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Peso Mexicano":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value / valores.peso_mex : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value / valor .rates.MXN : "No puedes dejar el valor sin ingresar un numero ";
         break;
       }
     })
@@ -81,5 +83,28 @@ function elegir(convertidor){
 }
 
 
+  
+  let myHeaders = new Headers();
+myHeaders.append("apikey", "VbQft7A08KrCDOjSRKxX5NuFh1buypZ3");
 
+ let requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: myHeaders
+};
+function changeMoney(){
+//fetch("https://api.apilayer.com/exchangerates_data/latest?symbols=CLP&base=EUR", requestOptions)  
+fetch("https://api.apilayer.com/exchangerates_data/latest?base=CLP&symbols=USD,EUR,ARS,MXN", requestOptions)
+.then(response => response.text())
+  .then(result =>{
+    valor = JSON.parse(result);
+  })
+  .catch(error => console.log('error', error));
+}
 
+function changeMoney2(){
+  fetch("http://api.cambio.today/v1/full/CLP/json?key=25487|5K4hn7MxTCyyRvncL7fC28Q^1M0mHjh5")
+  .then(response => response.json)
+  .then.apply(result => console.log(result))
+  .catch(error => console.log('error', error));
+}

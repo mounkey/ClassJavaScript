@@ -94,17 +94,18 @@ const elegir = (check) => {
 }
 
 
-function sendMail(sendMessanger){
+function sendMail(sendMessanger, mailTo){
   Email.send({
-    Host: "mail.goittodo.com",
-    Username: "jpgrover@gpittodo.com",
-    Password: "jp25gp84jp26",
-    To: "jpgrover@gmail.com",
-    From: "jpgrover@goittodo.com",
-    Subjetc:"Prueba",
+    Host: "smtp.elasticemail.com",
+    Username: "jpgrover@gmail.com",
+    Password: "F289BC2FEB922CB669C906EF68770486BD88",
+    To: mailTo,
+    From: "jpgrover@gmail.com",
+    Subject:"Prueba",
     Body: sendMessanger,
   })
   .then(function(message){
+    console.log( message);
     alert("Enviado");
   });
 
@@ -136,7 +137,7 @@ const intereses = (opcion) => {
         </div>
       </div>`;
       sendMessanger = `Nombre: ${form.nombre.value}`;
-      sendMail(sendMessanger, `${form.mail.value}`);
+      sendMail(sendMessanger, form.mail.value);
       break;
 
     case "compuesto":

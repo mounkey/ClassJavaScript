@@ -1,0 +1,26 @@
+
+*{
+    margin:o;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;    
+}
+
+body{
+    background: #d19d92;   
+    color: rgb(184, 161, 161);
+}
+
+header{
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.select_object{
+    text-align: center;
+}
+
+.img_selector{
+    width: 50%;
+    height: 50%;
+}
