@@ -10,11 +10,24 @@
 }
 
 body{
-  background-color: cadetblue ;
+  background-color:white ;
 }
 
 .menu{
-  background-color: aquamarine;
+  margin-top:15px;
+  background-color: #5F7078;
+}
+
+footer{
+  margin-top: 15px;
+  background-color: #5F7078;
+  color:white;
+}
+/*Index*/
+
+.carrusel{
+  width: 100%;
+  height: 85%;
 }
 
 /* Quienes somos */
@@ -24,7 +37,7 @@ body{
 }
 
 .qs__text{
-  background-color: cadetblue;
+  background-color: #5F7078;
   text-align: justify;
   margin: 10px 100px 10px 10px;
   color:white;
@@ -32,7 +45,7 @@ body{
 }
 
 #fecha{
-  color:white;
+  color:#57dfb7;
   font-size: 20px;
 }
 
@@ -67,6 +80,7 @@ body{
   margin-right: 20px;
   margin-bottom: 15px;
   color: white;
+  background-color: #5F7078;
 
 }
 form{
@@ -76,7 +90,7 @@ form{
 .form__input{
   padding-left: 5px;
   width: 100%;
-  color: black;
+  color: #5F7078;
 }
 
 .respint{
@@ -84,4 +98,9 @@ form{
   padding-right: 15px;
   margin-top: 15px;
   margin-bottom: 10px;
+}
+
+#resultadoConversion{
+  font-size: medium;
+  
 }

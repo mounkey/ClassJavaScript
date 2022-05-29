@@ -17,14 +17,6 @@ const btn = document.querySelector("#btnConversor");
 convertidorPD.addEventListener('change', () => elegir("PD"))
 convertidorDP.addEventListener('change', () => elegir("DP"))
 
-const valores = {
-  dolar:865.66,
-  euro: 898.52,
-  peso_arg : 7.38,
-  peso_mex : 42.88
-};
-
-valorDia.innerText = valores.dolar
 
 function elegir(convertidor){
   changeMoney();
@@ -62,7 +54,7 @@ function elegir(convertidor){
         break;
       
         case "Dolar":
-          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value / valor.rates.USD : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + Math.round(input_cambio.value / valor.rates.USD) : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Euro":
