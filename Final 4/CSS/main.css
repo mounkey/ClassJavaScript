@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+.car{
+  height: 60%;
+  width: 60%  ;
+}
+
+body{
+  background-color:white ;
+}
+
+.menu{
+  margin-top:15px;
+  background-color: #5F7078;
+}
+
+footer{
+  margin-top: 15px;
+  background-color: #5F7078;
+  color:white;
+}
+/*Index*/
+
+.carrusel{
+  width: 100%;
+  height: 85%;
+}
+
+/* Quienes somos */
+
+.qs{
+  background-color: white;
+}
+
+.qs__text{
+  background-color: #5F7078;
+  text-align: justify;
+  margin: 10px 100px 10px 10px;
+  color:white;
+  padding: 10px 15px 10px 15px;
+}
+
+#fecha{
+  color:#57dfb7;
+  font-size: 20px;
+}
+
+.monedas{
+  font-size: large;
+}
+
+.monedas ul li{
+  list-style: none;
+  padding-bottom: 10px;;
+}
+
+
+.monedas__titulo{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 25px;
+}
+
+.banner{
+  width: auto;
+  height: auto;
+}
+
+#intSimple{
+  padding-left: 15px;
+}
+
+.main{
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  color: white;
+  background-color: #5F7078;
+
+}
+form{
+  margin: 0 auto;
+  
+}
+.form__input{
+  padding-left: 5px;
+  width: 100%;
+  color: #5F7078;
+}
+
+.respint{
+  padding-left: 25px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#resultadoConversion{
+  font-size: medium;
+  
+}

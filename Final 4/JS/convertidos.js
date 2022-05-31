@@ -1,5 +1,5 @@
 const date = document.querySelector("#fecha"); //fecha.
-let valor;
+const claveApi = '25487|5K4hn7MxTCyyRvncL7fC28Q^1M0mHjh5';
 
 //Determinar fecha de hoy
 const today =  luxon.DateTime;
@@ -20,10 +20,8 @@ convertidorDP.addEventListener('change', () => elegir("DP"))
 
 function elegir(convertidor){
   changeMoney();
-  
   if (convertidor === "DP"){
     convertidorPD.checked = false;
-    let init = input_cambio.value;
     btn.addEventListener("click", () =>{
       switch(monedas.value){
         default:
@@ -31,61 +29,61 @@ function elegir(convertidor){
         break;
       
         case "Dolar":
-          resultado_cambio.innerText = input_cambio.value != "" ? `${init} Dolares  son $ ` + Math.round(input_cambio.value / valor.rates.USD) + "Pesos Chilenos": "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value * valor.rates.USD : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Euro":
-          resultado_cambio.innerText = input_cambio.value != "" ? `${init} Euros son $ ` + Math.round(input_cambio.value / valor.rates.EUR) + "Pesos Chilenos": "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value * valor.rates.EUR : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Peso Argentino":
-          resultado_cambio.innerText = input_cambio.value != "" ? `${init} Pesos Argentino son $ ` + Math.round(input_cambio.value / valor.rates.ARS) + "Pesos Chilenos" : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value * valor.rates.ARS : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Peso Mexicano":
-          resultado_cambio.innerText = input_cambio.value != "" ? `${init} Pesos Mexicano son $ ` + Math.round(input_cambio.value / valor .rates.MXN) + "Pesos Chilenos" : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value * valor.rates.MXN : "No puedes dejar el valor sin ingresar un numero ";
         break;
       }
     })    
   } else if(convertidor === "PD"){
     convertidorDP.checked = false;
-    let init = input_cambio.value;
     btn.addEventListener("click", () =>{
       switch(monedas.value){
         default:
-          resultado_cambio.innerText = "Elige unas de las monedas disponibles";
+          resultado_cambio.innerText = "hola";
         break;
       
         case "Dolar":
-          resultado_cambio.innerText = input_cambio.value != "" ? `${init} Pesos Chilenos son  $ ` + input_cambio.value * valor.rates.USD + " Dolares" : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + Math.round(input_cambio.value / valor.rates.USD) : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Euro":
-          resultado_cambio.innerText = input_cambio.value != "" ? `${init} Pesos Chilenos son  $ ` + input_cambio.value * valor.rates.EUR + "Euros": "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value / valor.rates.EUR : "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Peso Argentino":
-          resultado_cambio.innerText = input_cambio.value != "" ? `${init} Pesos Chilenos a $`+  input_cambio.value * valor.rates.ARS + "Pesos Argentinos" : "No puedes dejar el valor sin ingresar un numero ";
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " +  input_cambio.value / valor.rates.ARS: "No puedes dejar el valor sin ingresar un numero ";
         break;
 
         case "Peso Mexicano":
-          resultado_cambio.innerText = input_cambio.value != "" ? `${init} Pesos Chilenos a $` + input_cambio.value * valor.rates.MXN + "Pesos Mexicanos": "No puedes dejar el valor sin ingresar un numero ";
-
+          resultado_cambio.innerText = input_cambio.value != "" ? "$ " + input_cambio.value / valor .rates.MXN : "No puedes dejar el valor sin ingresar un numero ";
         break;
       }
     })
     }
+
 }
 
-let myHeaders = new Headers();
-myHeaders.append("apikey", "OGOUemZbKb6V0elUzwsROVFEFAfndqJZ");
+
+  
+  let myHeaders = new Headers();
+myHeaders.append("apikey", "VbQft7A08KrCDOjSRKxX5NuFh1buypZ3");
 
  let requestOptions = {
   method: 'GET',
   redirect: 'follow',
   headers: myHeaders
 };
-
 function changeMoney(){
 //fetch("https://api.apilayer.com/exchangerates_data/latest?symbols=CLP&base=EUR", requestOptions)  
 fetch("https://api.apilayer.com/exchangerates_data/latest?base=CLP&symbols=USD,EUR,ARS,MXN", requestOptions)
@@ -93,5 +91,12 @@ fetch("https://api.apilayer.com/exchangerates_data/latest?base=CLP&symbols=USD,E
   .then(result =>{
     valor = JSON.parse(result);
   })
+  .catch(error => console.log('error', error));
+}
+
+function changeMoney2(){
+  fetch("http://api.cambio.today/v1/full/CLP/json?key=25487|5K4hn7MxTCyyRvncL7fC28Q^1M0mHjh5")
+  .then(response => response.json)
+  .then.apply(result => console.log(result))
   .catch(error => console.log('error', error));
 }
